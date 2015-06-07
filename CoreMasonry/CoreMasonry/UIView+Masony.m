@@ -19,6 +19,8 @@
  */
 -(void)masViewAddConstraintMakeEqualSuperViewWithInsets:(UIEdgeInsets)insets{
     
+    if(self.superview == nil) return;
+    
     [self mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.edges.equalTo(self.superview).with.insets(insets);
